@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+        <title>SignIn&SignUp</title>
+        <link rel="stylesheet" href="style.css"> 
+    </head>
+    <body>
+        <div class="container">
+            <div class="form-box">
+                <h1 id="title">Sign Up</h1>
+                <form action=LoginServlet method="post"> 
+                    <div class="input-group">
+                        <div class="input-field" id="nameField">
+                           <input type="text" name="name" placeholder="Name"> 
+                        </div>
+
+                        <div class="input-field">
+                            <input type="email" name="email" placeholder="Email" required> 
+                         </div>
+
+                         <div class="input-field">
+                            <input type="password" name="password" placeholder="Password" required> 
+                         </div>
+                         <p>Forgot Password? <a href="#">Click here!</a></p>
+                    </div>
+                    <div class="btn-field">
+                        <button type="button"  name="signup" id="signupBtn">Sign up</button>
+                        <button type="button" name="signin"   id="signinBtn" class="disable">Sign in</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script>
+        let signupBtn= document.getElementById("signupBtn");    
+        let signinBtn= document.getElementById("signinBtn");    
+        let nameField= document.getElementById("nameField");    
+        let title= document.getElementById("title");
+        
+        
+
+        
+       signinBtn.onclick = function(){
+            nameField.style.maxHeight="0";
+            title.innerHTML="Sign In";
+            signupBtn.classList.add("disable");
+            signinBtn.classList.remove("disable");
+            
+            }  
+       		signinBtn.ondblclick=function(){
+            signinBtn.ondblclick=document.getElementById("signinBtn").type='submit';
+            };
+        
+        signupBtn.onclick = function(){
+            nameField.style.maxHeight="60px";
+            title.innerHTML="Sign Up";
+            signupBtn.classList.remove("disable");
+            signinBtn.classList.add("disable");
+	        } 
+        signupBtn.ondblclick=function(){
+            signupBtn.ondblclick=document.getElementById("signupBtn").type='submit';
+			};
+
+
+        </script>
+    </body>
+</html>
