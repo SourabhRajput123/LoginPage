@@ -41,25 +41,6 @@ The login page allows users to enter their credentials (username and password) t
 
 5. If the credentials are valid and authenticated successfully, you will be redirected to the dashboard or home page.
 
-## Directory Structure
-
-login-page/
-│
-├── src/ # Backend source code (Java files)
-│ ├── jaadu # Package containing backend code
-│ │ └── LoginServlet.java # Servlet for handling login requests
-│ │ └── ... # Other backend files
-│
-├── WebContent/ # Frontend HTML, CSS, and JS files
-│ ├── index.html # HTML file for login page
-│ ├── style.css # CSS file for styling
-│ ├── script.js # JavaScript file for client-side validation
-│ └── ... # Other frontend files
-│
-├── .classpath # Eclipse project configuration file
-├── .project # Eclipse project configuration file
-└── ...
-
 ## Contributing
 
 Contributions are welcome! If you find any bugs or have suggestions for improvements, please feel free to open an issue or submit a pull request.
